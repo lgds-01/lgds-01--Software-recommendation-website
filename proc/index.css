@@ -1,0 +1,612 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.container {
+    width: 87%;
+    height: 410px;
+    display: flex;
+    margin: 18px auto
+}
+
+.wholebox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto 18px
+}
+
+.box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    float: left;
+    margin: auto 30px;
+    overflow: hidden;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: relative;
+    z-index: 1;
+    transition: all .5s
+}
+
+.box:hover {
+    box-shadow: 6px 6px 10px #999
+}
+
+.box:before,
+.box:after {
+    content: "";
+    background: radial-gradient(circle at 23% 70%, rgba(255, 255, 255, 0.8), #fff 30%);
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -10.5%;
+    right: -150%;
+    z-index: 2;
+    transition: all .35s ease
+}
+
+.box:after {
+    background: rgba(255, 255, 255, 0.5);
+    width: 74%;
+    height: 75%;
+    right: auto;
+    left: -20%;
+    top: -65%
+}
+
+.box:hover:before {
+    opacity: 2;
+    right: -99.5%
+}
+
+.box:hover:after {
+    opacity: 1;
+    top: -51%
+}
+
+.box .box-content {
+    text-align: right;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 45%;
+    right: -110%;
+    z-index: 2;
+    width: 60%;
+    transition: all .5s
+}
+
+.box:hover .box-content {
+    right: 5%
+}
+
+.box .post {
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding-left: 23%;
+    margin-top: 0;
+    line-height: .55;
+    font-weight: 300
+}
+
+.box .icon {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.box .icon li {
+    display: inline-block;
+    color: black;
+    margin: 0 10px
+}
+
+.box .icon li a {
+    color: black;
+    border: solid grey;
+    border-width: 2px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    transition: all .3s;
+    font-weight: 100
+}
+
+.box .icon li a:hover {
+    color: #1e272e;
+    background-color: #fff;
+    border-radius: 10%;
+    box-shadow: 0 0 3px #1e272e inset
+}
+
+h1 {
+    letter-spacing: 5px;
+    font-size: 47px;
+    font-weight: 2000;
+    font-family: Microsoft YaHei
+}
+
+#twinkle {
+    width: 100%;
+    height: 100%;
+    background: url(../images/twinkle.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#twinkle .txt h1 {
+    color: #fff;
+    text-align: left;
+    padding-left: 0;
+    width: 320px;
+    line-height: .55;
+    letter-spacing: 5px;
+    font-size: 47px;
+    font-weight: 550;
+    font-family: Microsoft YaHei
+}
+
+#twinkle .txt {
+    color: #e0e0e0;
+    text-align: left;
+    padding-left: 3%;
+    width: 320px;
+    margin-top: 70px;
+    line-height: .6;
+    font-size: 15px;
+    font-weight: 400
+}
+
+#twinkle .txt .main-content {
+    opacity: 0
+}
+
+#foldersizeview {
+    width: 100%;
+    height: 100%;
+    background: url(../images/foldersizeview.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#foldersizeview .txt h1 {
+    color: #fff;
+    text-align: left;
+    padding-left: 0;
+    width: 320px;
+    line-height: .55;
+    letter-spacing: 5px;
+    font-size: 48px;
+    font-weight: 2000;
+    font-family: Microsoft YaHei
+}
+
+#foldersizeview .txt {
+    color: #ececec;
+    text-align: left;
+    padding-left: 3%;
+    width: 320px;
+    margin-top: 75px;
+    line-height: .6;
+    font-size: 15px;
+    font-weight: 550
+}
+
+#foldersizeview .txt .main-content {
+    opacity: 0
+}
+
+#bandzip {
+    width: 100%;
+    height: 100%;
+    background: url(../images/bandzip.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#bandzip .txt h1 {
+    color: #000;
+    text-align: left;
+    padding-left: 0;
+    width: 320px;
+    line-height: .55;
+    letter-spacing: 5px;
+    font-size: 47px;
+    font-weight: 2000;
+    font-family: Microsoft YaHei
+}
+
+#bandzip .txt .main-content {
+    opacity: 0
+}
+
+#bandzip .txt {
+    color: #555;
+    text-align: left;
+    padding-left: 3%;
+    width: 320px;
+    margin-top: 70px;
+    line-height: .55;
+    font-size: 15px;
+    font-weight: 550
+}
+
+#everything {
+    width: 100%;
+    height: 100%;
+    background: url(../images/everything.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#everything .txt h1 {
+    color: #000;
+    text-align: left;
+    padding-left: 0;
+    width: 320px;
+    line-height: .55;
+    letter-spacing: 5px;
+    font-size: 47px;
+    font-weight: 2000;
+    font-family: Microsoft YaHei
+}
+
+#everything .txt {
+    color: #535353;
+    text-align: left;
+    padding-left: 3%;
+    width: 320px;
+    margin-top: 70px;
+    line-height: .45;
+    font-size: 15px;
+    font-weight: 550
+}
+
+#everything .txt .main-content {
+    opacity: 0
+}
+
+#mactype {
+    width: 100%;
+    height: 100%;
+    background: url(../images/mactype.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#mactype .txt {
+    color: #fff;
+    text-align: left;
+    padding-left: 3%;
+    width: 320px;
+    margin-top: 75px;
+    line-height: .55;
+    font-size: 15px;
+    font-weight: 400
+}
+
+#mactype .txt .main-content {
+    opacity: 0
+}
+
+#translucent {
+    width: 100%;
+    height: 100%;
+    background: url(../images/translucenttb.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: relative
+}
+
+#ap {
+    z-index: 0
+}
+
+#ap {
+    position: absolute;
+    z-index: 0
+}
+
+#translucent .txt .main-content {
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    color: black;
+    top: 0;
+    left: 20%;
+    text-align: center;
+    font-family: Microsoft YaHei
+}
+
+#translucent .txt .main-content h1 {
+    margin: 0;
+    margin-top: 5%;
+    padding-left: 10%
+}
+
+#translucent .txt .main-content p {
+    margin: 0;
+    font-weight: 550;
+    color: #414141
+}
+
+#translucent .txt .main-content a {
+    font-weight: 550
+}
+
+.main {
+    height: 570px
+}
+
+.left {
+    margin-left: 20px;
+    margin-right: 10px
+}
+
+.right {
+    margin-left: 10px;
+    margin-right: 20px
+}
+
+.txt {
+    display: inline-block;
+    margin: 150px 20px;
+    text-align: center;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-weight: 200
+}
+
+.navi {
+    background-color: #a3a3a3;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    display: inline;
+    font-weight: 100
+}
+
+.list {
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 210px
+}
+
+.list {
+    display: none
+}
+
+.list li a {
+    display: block
+}
+
+.navi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #383838;
+    text-align: center;
+    font-weight: 100
+}
+
+.navi li {
+    float: left;
+    width: 210px
+}
+
+.navi li a {
+    display: block;
+    color: #dfdfdf;
+    text-align: center;
+    line-height: 100%;
+    padding: 14px 16px;
+    text-decoration: none
+}
+
+.navi li a:hover {
+    background-color: #111
+}
+
+.active {
+    background-color: #22518f
+}
+
+a {
+    text-decoration: none;
+    color: #2c65cf
+}
+
+.b {
+    text-decoration: none;
+    color: #2c65cf
+}
+
+#ap {
+    position: absolute;
+    left: 26%;
+    top: 24.6%;
+    padding: 0;
+    margin: 0
+}
+
+footer {
+    background-color: #dbdbdb;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    height: 100%;
+    width: 100%
+}
+
+footer address {
+    text-align: left;
+    padding: 0;
+    padding-left: 15px;
+    margin: 0;
+    float: left
+}
+
+footer p {
+    padding-bottom: 5px;
+    margin: 0
+}
+
+.backto {
+    width: 58px;
+    height: 160px;
+    position: fixed;
+    right: 25px;
+    bottom: 0;
+    background: url(../images/bkto.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.pic {
+    width: 100%;
+    height: 100%
+}
+
+.lnav {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white
+}
+
+.lnav ul {
+    display: inline-block;
+    width: 5%;
+    height: 100%;
+    padding-left: 48%;
+    background-color: white;
+    margin: 0
+}
+
+.lnav ul li {
+    width: 8.85px;
+    height: 8.85px;
+    margin-top: 70px;
+    float: left;
+    list-style: none;
+    border: #4e4e4e solid;
+    border-width: 3px
+}
+
+.lnav ul :nth-child(1) {
+    margin-top: 190px
+}
+
+.rimg {
+    float: left;
+    width: 80%;
+    height: 100%;
+    overflow: hidden
+}
+
+.imgli {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0
+}
+
+.imgli li {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    margin: 0
+}
+
+.navshow {
+    background-color: #4e4e4e
+}
+
+#img1 {
+    background: url(../images/1.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#img2 {
+    background: url(../images/2.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+#img3 {
+    background: url(../images/3.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+.content {
+    opacity: 0;
+    font-size: 100px;
+    text-align: center;
+    padding-left: 35%;
+    padding-top: 15%;
+    color: white
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    padding-left: 33.5%
+}
+
+.item a {
+    float: left;
+    padding-left: 4%
+}
+
+.mess {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    bottom: 1px;
+    left: 20%
+}
+
+.mess img {
+    padding-top: 1px;
+    width: 168px;
+    height: 168px
+}
+
+footer ul {
+    position: relative
+}
+
+footer ul li {
+    list-style: none;
+    background-color: #dbdbdb;
+    width: 270px;
+    height: 170px;
+    position: absolute;
+    text-align: center;
+    display: none;
+    left: 10%;
+    bottom: -133px;
+    border-radius: 5px;
+    z-index: 3;
+    opacity: .8
+}
+
+.act {
+    display: block
+}
+
+
+}

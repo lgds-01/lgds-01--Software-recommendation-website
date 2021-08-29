@@ -1,0 +1,1 @@
+$(function(){$(".item a").click(function(event){event.stopPropagation();$("footer ul li").stop().hide();$("footer ul li").eq($(this).index()).stop().show()});$(document).click(function(){$("footer ul li").stop().hide()})});
